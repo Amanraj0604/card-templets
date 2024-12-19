@@ -1,0 +1,165 @@
+.carosel-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.carosel-left {
+    flex: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    background: #f7f7ed;
+}
+
+.carosel-left span {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background: green;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    position: relative;
+}
+
+.carosel-left span > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carosel-right {
+    flex: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 5%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.categories {
+    font-size: 20px;
+    font-weight: 700;
+    color: #990011;
+    letter-spacing: 5px;
+}
+
+.sub-categories {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8f8f8b;
+    letter-spacing: 5px;
+}
+
+.title {
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #990011;
+    letter-spacing: 3px;
+}
+
+.knowmore {
+    width: 20%;
+    padding: 15px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.knowmore:hover {
+    background: white;
+    color: black;
+}
+
+/* Responsive styles */
+
+/* For tablets (screens up to 768px) */
+@media (max-width: 768px) {
+    .carosel-sec {
+        flex-direction: column; /* Stack left and right sections */
+    }
+
+    .carosel-left, .carosel-right {
+        flex: 100%; /* Make both sections take up full width */
+        margin-top: 20px;
+        padding: 5%;
+    }
+
+    .carosel-left span {
+        height: 300px; /* Adjust image size for smaller screens */
+        width: 300px;
+    }
+
+    .categories {
+        font-size: 18px; /* Adjust font size for better readability */
+        letter-spacing: 3px;
+    }
+
+    .sub-categories {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .title {
+        font-size: 28px; /* Adjust for mobile devices */
+    }
+
+    .subtitle {
+        font-size: 14px; /* Adjust for mobile devices */
+    }
+
+    .knowmore {
+        width: 40%; /* Adjust button size */
+        padding: 12px;
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+/* For mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    .carosel-sec {
+        flex-direction: column;
+    }
+
+    .carosel-left, .carosel-right {
+        flex: 100%;
+        margin-top: 10px;
+        padding: 10%;
+    }
+
+    .carosel-left span {
+        height: 250px; /* Further reduce image size for mobile */
+        width: 250px;
+    }
+
+    .categories {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        letter-spacing: 2px;
+    }
+
+    .sub-categories {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .subtitle {
+        font-size: 12px; /* Smaller subtitle font for mobile */
+    }
+
+    .knowmore {
+        width: 60%; /* Make the button larger for better clickability */
+        padding: 10px;
+        font-size: 14px;
+    }
+}
